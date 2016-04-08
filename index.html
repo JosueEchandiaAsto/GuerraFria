@@ -10,6 +10,8 @@
     <h1 class="header-title">
       La Guerra Fria
     </h1>
+    <input type="button" class="header-button is-active" id="show" name="name" value="Mostrar">
+    <input type="button" class="header-button" id="hide" name="name" value="Ocultar">
     <span class="header-name">
       @JosueEchandiaA
     </span>
@@ -17,24 +19,26 @@
       <img src="img/foto.jpg" height="48" width="48" alt="" />
     </figure>
   </header>
-  <section class="Prezi">
+  <section class="Prezi" id="Prezi">
       <iframe id="iframe_container" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" width="1000" height="450" src="https://prezi.com/embed/_kp3yssw4uhh/?bgcolor=ffffff&amp;lock_to_path=1&amp;autoplay=0&amp;autohide_ctrls=0&amp;landing_data=bHVZZmNaNDBIWnNjdEVENDRhZDFNZGNIUE43MHdLNWpsdFJLb2ZHanI0NURxVCthcm5taVZOSHVETkcrRE1aMDhBPT0&amp;landing_sign=cIJldUqI6pTjNaKgsaqbC2b2-HfSd2btd13VekxTzd0"></iframe>
   </section>
   <script type="text/javascript">
-    // var contraseña = "josuejaja"
-    // function inicio() {
-    //   var use = prompt("Contraseña")
-    //   cost(use)
-    // }
-    // function cost(use) {
-    //   if (use == contraseña) {
-    //     alert("Gracias")
-    //   }
-    //   else {
-    //     inicio()
-    //   }
-    // }
-    // inicio()
+  var $buttonShowMenu = document.getElementById("show");
+  var $buttonHideMenu = document.getElementById("hide");
+  var $menu = document.getElementById("Prezi");
+
+  var show = function(){
+    $buttonShowMenu.classList.remove("is-active");
+    $buttonHideMenu.classList.add("is-active");
+    $menu.classList.add("is-active");
+  }
+  var hide = function(){
+    $buttonHideMenu.classList.remove("is-active");
+    $buttonShowMenu.classList.add("is-active");
+    $menu.classList.remove("is-active");
+  }
+  $buttonShowMenu.addEventListener("click", show);
+  $buttonHideMenu.addEventListener("click", hide);
   </script>
 </body>
 </html>
