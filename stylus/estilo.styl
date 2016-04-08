@@ -1,11 +1,10 @@
 @import "normalize.styl"
 @import "nib"
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed)
 
 color_A = #EA3546
-color_B = #F9C80E
-body
-  background lightgray
 .header
+  font-family 'Roboto Condensed', sans-serif
   display block
   background color_A
   overflow hidden
@@ -20,6 +19,13 @@ body
   &-name
   &-foto
     float right
+
+  &-foto
+    height 3em
+    width 3em
+    margin 0 .5em 0 0
+    img
+      border-radius 1.5em
 
 .Prezi
   padding 2em
